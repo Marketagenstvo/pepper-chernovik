@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Админ-панель — Pepper Motors</title>
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+  <div id="login" class="login" hidden>
+    <form class="login__card" id="login-form">
+      <h1>Вход в админ-панель</h1>
+      <p class="hint">Pepper Motors — управление сайтом</p>
+      <label>Логин<input name="login" autocomplete="username" required></label>
+      <label>Пароль<input name="password" type="password" autocomplete="current-password" required></label>
+      <button class="btn btn--primary" type="submit">Войти</button>
+      <p class="login__error" id="login-error" hidden></p>
+    </form>
+  </div>
+
+  <div id="app" hidden>
+    <aside class="sidebar">
+      <div class="sidebar__top">
+        <div class="sidebar__brand">Pepper <b>Motors</b></div>
+        <a class="sidebar__site" href="/" target="_blank" rel="noopener">Сайт</a>
+      </div>
+      <nav id="tabs"></nav>
+      <div class="sidebar__footer">
+        <button id="logout" class="link">Выйти</button>
+      </div>
+    </aside>
+    <main class="workspace">
+      <header class="workspace__head">
+        <h1 id="page-title">Контент</h1>
+        <div class="workspace__actions">
+          <span id="save-status" class="save-status"></span>
+          <button id="save" class="btn btn--primary">Сохранить</button>
+        </div>
+      </header>
+      <section id="panel" class="panel"></section>
+    </main>
+  </div>
+
+  <script type="module" src="/admin/admin.js"></script>
+</body>
+</html>
